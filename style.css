@@ -1,0 +1,287 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  color: #718096 !important;
+  font-size: 14px !important;
+  font-family: "Nunito", "Orelega One", "Arial", sans-serif;
+  background-color: #edf2f7;
+}
+
+.transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/**  Navbar & Sidebar CSS **/
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background-color: #fff;
+  margin-left: 0;
+  transition: all 0.3s;
+  z-index: 9997;
+}
+
+.topbar .bars {
+  float: left;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  margin-left: 10px;
+}
+
+.topbar .bars button:hover {
+  color: #ccc;
+}
+
+.topbar .menu {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  padding: 0 10px;
+}
+
+.topbar .menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.topbar .menu ul li {
+  display: inline-block;
+  margin: 8px 10px 0 10px;
+}
+
+.topbar .menu ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.topbar .menu ul li a i {
+  font-size: 22px;
+}
+
+.topbar .menu ul li .dropdown-toggle {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.topbar .menu ul li .dropdown-menu {
+  margin-top: 30px;
+  margin-right: 10px;
+  border: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.topbar .menu ul li .dropdown-menu a {
+  color: #718096;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.topbar .menu ul li img {
+  width: 40px;
+  height: 40px;
+  margin-top: -8px;
+  border: 2px solid #d9dadb;
+  border-radius: 100px;
+}
+
+.topbar .menu ul li a .notif {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff;
+  z-index: 9999;
+  border-right: 2px solid #eee;
+}
+
+.sidebar .logo {
+  position: fixed;
+  width: 275px;
+  height: 75px;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.sidebar .logo a {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.sidebar .sidebar-items {
+  padding: 75px 30px;
+  height: 100%;
+  margin-left: -10px;
+  overflow: auto;
+}
+
+.sidebar .sidebar-items .menu {
+  color: #a0aec0;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.sidebar .sidebar-items ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .sidebar-items ul li {
+  display: block;
+  position: relative;
+}
+
+.sidebar .sidebar-items ul li a {
+  text-decoration: none;
+  color: #4a5568;
+  margin-left: 15px;
+}
+
+.sidebar .sidebar-items ul li a:hover,
+.sidebar .sidebar-items ul li a.active {
+  color: #4299e1;
+}
+
+.sidebar .sidebar-items ul li a i {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.sidebar .sidebar-items ul li a span {
+  font-size: 16px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.sidebar .toggle-right {
+  float: right;
+}
+
+.sidebar .sidebar-items .btn-toggle-submenu {
+  margin-left: 20px;
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 0.1875rem 0.5rem;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #d2f4ea;
+}
+
+.sidebar-show {
+  left: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  z-index: 9998;
+}
+
+@media (min-width: 992px) {
+  .topbar {
+    margin-left: 300px;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+
+  .content {
+    padding-left: 300px;
+  }
+
+  .topbar .bars button {
+    display: none;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+.upgrades {
+  margin-top: 60px;
+}
+.btn-more a {
+  text-decoration: none;
+}
+
+.btn-more {
+  background-color: #7942ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 5px 2px;
+  margin-left: -30px;
+  padding: 20px 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-more:hover {
+  background-color: #6124e3;
+  color: #eee;
+}
+
+.docs-header {
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+
+/**  Content CSS  **/
+.content {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.content h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/**  Scrollbar CSS  **/
+::-webkit-scrollbar {
+  width: 0px;
+}
